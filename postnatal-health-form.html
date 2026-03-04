@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Declaration & Questionnaire — Postnatal Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-eyebrow">Claire Edwards Yoga</div>
+    <h1>Health Declaration<br><em>&amp; Questionnaire</em></h1>
+    <div class="header-sub">Postnatal Yoga</div>
+  </div>
+
+  <div id="main-form">
+
+    <div class="intro">
+      <p>Starting our classes is no different to starting any other form of exercise — the same advice applies. If you are not used to regular exercise, please move carefully and wait until after your 6 or 8 week check.</p>
+    </div>
+
+    <!-- =====================
+         PROGRESS BAR
+         ===================== -->
+    <div class="progress-bar">
+      <div class="progress-step">
+        <div class="progress-dot active" id="dot-1">1</div>
+        <div class="progress-label">Your Details</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="progress-dot" id="dot-2">2</div>
+        <div class="progress-label">Your Health</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="progress-dot" id="dot-3">3</div>
+        <div class="progress-label">Birth Details</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step">
+        <div class="progress-dot" id="dot-4">4</div>
+        <div class="progress-label">Your Baby</div>
+      </div>
+    </div>
+
+    <div class="form-container">
+
+      <!-- =====================
+           STEP 1: PERSONAL DETAILS
+           ===================== -->
+      <div class="step-panel active" id="step-1">
+        <div class="section">
+          <div class="section-label">Your Details</div>
+
+          <div class="field" id="field-name">
+            <label>Full Name <span class="required">*</span></label>
+            <input type="text" id="name" placeholder="Your full name" autocomplete="name">
+            <div class="field-error-msg">Please enter your name</div>
+          </div>
+
+          <div class="field" id="field-email">
+            <label>Email Address <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="your@email.com" autocomplete="email">
+            <div class="field-error-msg">Please enter a valid email address</div>
+          </div>
+
+          <div class="field">
+            <label>Address</label>
+            <textarea id="address" placeholder="Your address" rows="2"></textarea>
+          </div>
+
+          <div class="field" id="field-mobile">
+            <label>Mobile <span class="required">*</span></label>
+            <input type="tel" id="mobile" placeholder="07700 000000" autocomplete="tel">
+            <div class="field-error-msg">Please enter your mobile number</div>
+          </div>
+
+          <div class="field">
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+          </div>
+
+          <div class="field" id="field-postnatal-weeks">
+            <label>How many weeks / months postnatal are you now? <span class="required">*</span></label>
+            <input type="text" id="postnatal-weeks" placeholder="e.g. 8 weeks, 4 months">
+            <div class="field-error-msg">Please enter how far postnatal you are</div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-next" onclick="nextStep(1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- =====================
+           STEP 2: YOUR HEALTH
+           ===================== -->
+      <div class="step-panel" id="step-2">
+        <div class="section">
+          <div class="section-label">Your Health</div>
+
+          <div class="field">
+            <label>How is your general health?</label>
+            <textarea id="general-health" placeholder="Describe your general health..."></textarea>
+          </div>
+
+          <!-- =====================
+               POSTNATAL SYMPTOMS — MOTHER
+               Add or remove items below as needed.
+               ===================== -->
+          <p class="checklist-intro">Have you experienced any of the following?</p>
+
+          <div class="checklist-grid" id="symptoms-grid">
+            <label class="check-item">
+              <input type="checkbox" value="Anxiety">
+              <span>Anxiety</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Depression">
+              <span>Depression</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Fatigue">
+              <span>Fatigue</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Headaches">
+              <span>Headaches</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="High / Low Blood Pressure">
+              <span>High / Low Blood Pressure</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Anaemia (low iron) / Dizzy">
+              <span>Anaemia / Dizzy</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Lower Back Ache">
+              <span>Lower Back Ache</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="PGP / SPD">
+              <span>PGP / SPD</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Varicose Veins">
+              <span>Varicose Veins</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Nosebleeds">
+              <span>Nosebleeds</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Pain from Fibroids">
+              <span>Pain from Fibroids</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Diabetic">
+              <span>Diabetic</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Bleeding">
+              <span>Bleeding</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Caesarean Section">
+              <span>Caesarean Section</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Prolapse">
+              <span>Prolapse</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Joint Pains">
+              <span>Joint Pains</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Diastasis Recti">
+              <span>Diastasis Recti</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Hernia">
+              <span>Hernia</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Piles">
+              <span>Piles</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Sciatica">
+              <span>Sciatica</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Stiff Neck / Shoulders">
+              <span>Stiff Neck / Shoulders</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Mastitis">
+              <span>Mastitis</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Exhaustion">
+              <span>Exhaustion</span>
+            </label>
+          </div>
+
+          <div class="field" style="margin-top:16px;">
+            <label>Give further details if any health issue may affect your yoga practice</label>
+            <textarea id="health-details" placeholder="Any further details..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Are you taking any medication that may affect your yoga practice? Have you had any previous operations or injuries?</label>
+            <textarea id="medication-injuries" placeholder="Please describe, or write 'None'"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Prior to this have you had any pregnancy losses? Please give years.</label>
+            <textarea id="pregnancy-losses" placeholder="Please describe, or write 'None'"></textarea>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-back" onclick="prevStep(2)">← Back</button>
+          <button class="btn-next" onclick="nextStep(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- =====================
+           STEP 3: BIRTH DETAILS
+           ===================== -->
+      <div class="step-panel" id="step-3">
+        <div class="section">
+          <div class="section-label">Birth Details</div>
+
+          <div class="field">
+            <label>How was the birth? Did labour start itself / induced / accelerated?</label>
+            <textarea id="labour-start" placeholder="Describe how labour started..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>How long was labour? (first and second stage)</label>
+            <textarea id="labour-length" placeholder="e.g. 6 hours first stage, 45 mins second stage"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Nature of delivery</label>
+            <select id="delivery-type">
+              <option value="">Please select...</option>
+              <option value="Vaginal">Vaginal</option>
+              <option value="Ventouse">Ventouse</option>
+              <option value="Forceps">Forceps</option>
+              <option value="Caesarean">Caesarean</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Environment</label>
+            <select id="birth-environment">
+              <option value="">Please select...</option>
+              <option value="Home">Home</option>
+              <option value="Hospital">Hospital</option>
+              <option value="Water">Water</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Was your baby full term / premature / overdue?</label>
+            <select id="baby-term">
+              <option value="">Please select...</option>
+              <option value="Full term">Full term</option>
+              <option value="Premature">Premature</option>
+              <option value="Overdue">Overdue</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Health of your baby at birth and afterwards</label>
+            <textarea id="baby-health-birth" placeholder="Describe your baby's health at birth..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Pain relief used</label>
+            <select id="pain-relief">
+              <option value="">Please select...</option>
+              <option value="Gas & Air">Gas &amp; Air</option>
+              <option value="Pethidine">Pethidine</option>
+              <option value="Epidural">Epidural</option>
+              <option value="Other">Other</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Perineum health</label>
+            <select id="perineum">
+              <option value="">Please select...</option>
+              <option value="Fine">Fine</option>
+              <option value="Stitches">Stitches</option>
+              <option value="Tearing">Tearing</option>
+              <option value="Episiotomy">Episiotomy</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Any postpartum haemorrhage?</label>
+            <select id="haemorrhage">
+              <option value="">Please select...</option>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- =====================
+             BACKGROUND
+             ===================== -->
+        <div class="section">
+          <div class="section-label">Background</div>
+
+          <div class="field">
+            <label>Do you have any yoga experience or take any other regular exercise?</label>
+            <textarea id="yoga-experience" placeholder="Tell us about your experience..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Why have you come to learn yoga, and what do you hope to gain?</label>
+            <textarea id="goals" placeholder="Your intentions and goals..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>How did you hear about this class?</label>
+            <input type="text" id="how-heard" placeholder="e.g. Google, friend, Instagram...">
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-back" onclick="prevStep(3)">← Back</button>
+          <button class="btn-next" onclick="nextStep(3)">Next →</button>
+        </div>
+      </div>
+
+      <!-- =====================
+           STEP 4: BABY'S HEALTH + DECLARATION
+           ===================== -->
+      <div class="step-panel" id="step-4">
+        <div class="section">
+          <div class="section-label">Your Baby's Health</div>
+
+          <!-- =====================
+               BABY SYMPTOMS CHECKLIST
+               Add or remove items below as needed.
+               ===================== -->
+          <p class="checklist-intro">Has your baby experienced any of the following?</p>
+
+          <div class="checklist-grid" id="baby-symptoms-grid">
+            <label class="check-item">
+              <input type="checkbox" value="Colic">
+              <span>Colic</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Constipation">
+              <span>Constipation</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Jaundice">
+              <span>Jaundice</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Cranial Compression">
+              <span>Cranial Compression</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Fevers">
+              <span>Fevers</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Hip Dislocation">
+              <span>Hip Dislocation</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Respiratory Problems">
+              <span>Respiratory Problems</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Irritability">
+              <span>Irritability</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" value="Convulsions">
+              <span>Convulsions</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- =====================
+             MARKETING OPT-IN
+             ===================== -->
+        <div class="section">
+          <div class="section-label">Keep in Touch</div>
+
+          <label class="optin-item">
+            <input type="checkbox" id="optin-lushtums">
+            <span>I would like to receive occasional emails from LushTums including the weekly class recording</span>
+          </label>
+
+          <label class="optin-item">
+            <input type="checkbox" id="optin-claire">
+            <span>I would like to receive news &amp; special offers from Claire Edwards Yoga by email</span>
+          </label>
+        </div>
+
+        <!-- =====================
+             DECLARATION
+             ===================== -->
+        <div class="section">
+          <div class="section-label">Declaration</div>
+          <div class="declaration-box">
+            <p>I understand that by participating in this class I am totally responsible for myself and if in the unlikely event of any injury (to myself or to others) of any kind, the teacher of this class is not in any way responsible.</p>
+            <label class="declaration-check">
+              <input type="checkbox" id="declaration">
+              <span>By ticking this box I confirm I have read and understood the above declaration and agree to its terms.</span>
+            </label>
+            <div class="declaration-error" id="declaration-error">You must agree to the declaration before submitting.</div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button class="btn-back" onclick="prevStep(4)">← Back</button>
+          <button class="btn-next" id="submit-btn" onclick="submitForm()">Submit ✓</button>
+        </div>
+      </div>
+
+    </div><!-- /form-container -->
+  </div><!-- /main-form -->
+
+  <!-- Success screen -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon">🌿</div>
+    <h2>Thank you</h2>
+    <p>Your health questionnaire has been received. Claire looks forward to welcoming you to class.</p>
+  </div>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    // ── Checkbox visual toggle ──────────────────────────────────────────
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.check-item').classList.toggle('checked', cb.checked);
+      });
+    });
+
+    // ── Validation helpers ──────────────────────────────────────────────
+    function setError(fieldId, show) {
+      const el = document.getElementById(fieldId);
+      if (el) el.classList.toggle('error', show);
+    }
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // ── Step navigation ─────────────────────────────────────────────────
+    function nextStep(from) {
+      if (!validateStep(from)) return;
+      goToStep(from + 1);
+    }
+
+    function prevStep(from) {
+      goToStep(from - 1);
+    }
+
+    function goToStep(step) {
+      // Hide current, show next
+      document.getElementById('step-' + currentStep).classList.remove('active');
+      document.getElementById('step-' + step).classList.add('active');
+
+      // Update progress dots
+      for (let i = 1; i <= totalSteps; i++) {
+        const dot = document.getElementById('dot-' + i);
+        dot.classList.remove('active', 'complete');
+        if (i < step)      dot.classList.add('complete');
+        else if (i === step) dot.classList.add('active');
+      }
+
+      currentStep = step;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── Per-step validation ─────────────────────────────────────────────
+    function validateStep(step) {
+      let valid = true;
+
+      if (step === 1) {
+        const name  = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const weeks  = document.getElementById('postnatal-weeks').value.trim();
+
+        setError('field-name',            !name);    if (!name)    valid = false;
+        setError('field-email',           !validateEmail(email)); if (!validateEmail(email)) valid = false;
+        setError('field-mobile',          !mobile);  if (!mobile)  valid = false;
+        setError('field-postnatal-weeks', !weeks);   if (!weeks)   valid = false;
+      }
+
+      if (!valid) {
+        const firstError = document.querySelector('#step-' + step + ' .field.error');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      return valid;
+    }
+
+    // ── Collect checked symptoms ────────────────────────────────────────
+    function getChecked(gridId) {
+      const checked = [];
+      document.querySelectorAll('#' + gridId + ' input[type="checkbox"]:checked').forEach(cb => {
+        checked.push(cb.value);
+      });
+      return checked.join(', ') || 'None';
+    }
+
+    // ── Final submit ────────────────────────────────────────────────────
+    function submitForm() {
+      const declaration = document.getElementById('declaration').checked;
+      const declarationError = document.getElementById('declaration-error');
+
+      if (!declaration) {
+        declarationError.classList.add('visible');
+        declarationError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      declarationError.classList.remove('visible');
+
+      // ── Collect all data ──────────────────────────────────────────────
+      const formData = {
+        timestamp:          new Date().toISOString(),
+        class_type:         'Postnatal',
+        // Step 1
+        name:               document.getElementById('name').value.trim(),
+        email:              document.getElementById('email').value.trim(),
+        address:            document.getElementById('address').value.trim(),
+        mobile:             document.getElementById('mobile').value.trim(),
+        dob:                document.getElementById('dob').value,
+        postnatal_weeks:    document.getElementById('postnatal-weeks').value.trim(),
+        // Step 2
+        general_health:     document.getElementById('general-health').value.trim(),
+        symptoms:           getChecked('symptoms-grid'),
+        health_details:     document.getElementById('health-details').value.trim(),
+        medication_injuries: document.getElementById('medication-injuries').value.trim(),
+        pregnancy_losses:   document.getElementById('pregnancy-losses').value.trim(),
+        // Step 3
+        labour_start:       document.getElementById('labour-start').value.trim(),
+        labour_length:      document.getElementById('labour-length').value.trim(),
+        delivery_type:      document.getElementById('delivery-type').value,
+        birth_environment:  document.getElementById('birth-environment').value,
+        baby_term:          document.getElementById('baby-term').value,
+        baby_health_birth:  document.getElementById('baby-health-birth').value.trim(),
+        pain_relief:        document.getElementById('pain-relief').value,
+        perineum:           document.getElementById('perineum').value,
+        haemorrhage:        document.getElementById('haemorrhage').value,
+        yoga_experience:    document.getElementById('yoga-experience').value.trim(),
+        goals:              document.getElementById('goals').value.trim(),
+        how_heard:          document.getElementById('how-heard').value.trim(),
+        // Step 4
+        baby_symptoms:      getChecked('baby-symptoms-grid'),
+        optin_lushtums:     document.getElementById('optin-lushtums').checked ? 'Yes' : 'No',
+        optin_claire:       document.getElementById('optin-claire').checked ? 'Yes' : 'No',
+        declaration_agreed: 'Yes'
+      };
+
+      console.log('Form submission data:', formData);
+
+      // TODO Story 4: POST formData to Google Sheets via Apps Script URL
+      // fetch(APPS_SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) })
+
+      // ── Show success ──────────────────────────────────────────────────
+      document.getElementById('main-form').classList.add('hidden');
+      document.getElementById('success-screen').classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
