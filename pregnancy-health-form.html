@@ -339,13 +339,26 @@
 
       console.log('Form submission data:', formData);
 
-      // TODO Story 4: POST formData to Google Sheets via Apps Script URL
-      // fetch(APPS_SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) })
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaQRmaE1LVouTX5BRm0XBMICsQHNe9F3tNd2SAMYLL-nM-zMZZugj1Sf6GZl0jnXh_/exec';
 
-      // ── Show success ────────────────────────────────────────────────
-      document.getElementById('main-form').classList.add('hidden');
-      document.getElementById('success-screen').classList.add('visible');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+fetch(APPS_SCRIPT_URL, {
+  method: 'POST',
+  body: JSON.stringify(formData)
+})
+.then(response => response.json())
+.then(result => {
+  if (result.success) {
+    document.getElementById('main-form').classList.add('hidden');
+    document.getElementById('success-screen').classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    alert('Something went wrong. Please try again.');
+  }
+})
+.catch(() => {
+  alert('Something went wrong. Please try again.');
+});
+
     });
   </script>
 
