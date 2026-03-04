@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Declaration & Questionnaire — Restorative Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-eyebrow">Claire Edwards Yoga</div>
+    <h1>Health Declaration<br><em>&amp; Questionnaire</em></h1>
+    <div class="header-sub">Restorative Yoga</div>
+  </div>
+
+  <div id="main-form">
+
+    <div class="intro">
+      <p>This form helps Claire understand your health background so she can support you safely in class. All information is kept confidential.</p>
+    </div>
+
+    <div class="form-container">
+
+      <!-- =====================
+           PERSONAL DETAILS
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Your Details</div>
+
+        <div class="field" id="field-name">
+          <label>Full Name <span class="required">*</span></label>
+          <input type="text" id="name" placeholder="Your full name" autocomplete="name">
+          <div class="field-error-msg">Please enter your name</div>
+        </div>
+
+        <div class="field">
+          <label>Address</label>
+          <textarea id="address" placeholder="Your address" rows="2"></textarea>
+        </div>
+
+        <div class="field" id="field-mobile">
+          <label>Mobile Number <span class="required">*</span></label>
+          <input type="tel" id="mobile" placeholder="07700 000000" autocomplete="tel">
+          <div class="field-error-msg">Please enter your mobile number</div>
+        </div>
+
+        <div class="field" id="field-email">
+          <label>Email Address <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="your@email.com" autocomplete="email">
+          <div class="field-error-msg">Please enter a valid email address</div>
+        </div>
+
+        <div class="field">
+          <label>Date of Birth</label>
+          <input type="date" id="dob">
+        </div>
+
+        <div class="field" id="field-emergency">
+          <label>Emergency Contact Name &amp; Number <span class="required">*</span></label>
+          <input type="text" id="emergency" placeholder="Name and phone number">
+          <div class="field-error-msg">Please enter an emergency contact</div>
+        </div>
+      </div>
+
+      <!-- =====================
+           BACKGROUND
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Background</div>
+
+        <div class="field">
+          <label>Have you practised yoga before?</label>
+          <textarea id="yoga-experience" placeholder="Tell us about your experience, or write 'No' if new to yoga"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Do you do any other kinds of exercise?</label>
+          <textarea id="other-exercise" placeholder="e.g. running, swimming, pilates..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>What do you hope to gain from your class or retreat?</label>
+          <textarea id="goals" placeholder="Your intentions and goals..."></textarea>
+        </div>
+      </div>
+
+      <!-- =====================
+           HEALTH CONDITIONS
+           Add or remove items in the checklist below as needed.
+           Each item needs: value="Condition Name" and a <span> label.
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Health Conditions</div>
+        <p class="checklist-intro">Please mark any of the following that apply to you:</p>
+
+        <div class="checklist-grid" id="conditions-grid">
+          <label class="check-item">
+            <input type="checkbox" value="Abdominal Disorder">
+            <span>Abdominal Disorder</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Arthritis">
+            <span>Arthritis</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Asthma">
+            <span>Asthma</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Back Pain">
+            <span>Back Pain</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Knee Problems">
+            <span>Knee Problems</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Neck / Shoulder Problems">
+            <span>Neck / Shoulder Problems</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Heart Disorders">
+            <span>Heart Disorders</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Low / High Blood Pressure">
+            <span>Low / High Blood Pressure</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Pregnant" id="pregnant-cb">
+            <span>Pregnant</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Postnatal Recovery (PGP / Diastasis Recti / Prolapse)">
+            <span>Postnatal Recovery</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Diabetes">
+            <span>Diabetes</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Epilepsy">
+            <span>Epilepsy</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Anxiety or Depression">
+            <span>Anxiety or Depression</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Visual Disorder">
+            <span>Visual Disorder</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Hearing Disorder">
+            <span>Hearing Disorder</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Auto-immune Disorder">
+            <span>Auto-immune Disorder</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Balance Disorder (MS / ME / Lupus)">
+            <span>Balance Disorder (MS / ME / Lupus)</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Recent Surgery">
+            <span>Recent Surgery</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Respiratory Issues">
+            <span>Respiratory Issues</span>
+          </label>
+        </div>
+
+        <!-- Shows when Pregnant is ticked -->
+        <div class="conditional-field" id="pregnancy-weeks-field">
+          <label>How many weeks pregnant are you?</label>
+          <input type="number" id="pregnancy-weeks" placeholder="e.g. 24" min="1" max="45">
+        </div>
+
+        <!-- OTHER CONDITION — free text for anything not listed above -->
+        <div class="field other-field">
+          <label>Any other condition not listed above?</label>
+          <textarea id="other-condition" placeholder="Please describe..."></textarea>
+        </div>
+      </div>
+
+      <!-- =====================
+           DECLARATION
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Declaration</div>
+        <div class="declaration-box">
+          <p>I understand that by participating in this class I am totally responsible for myself and if in the unlikely event of any injury of any kind, the teacher of this class is not in any way responsible. I confirm that I have answered the questions on this form accurately and that it is my own responsibility to check with my GP if I have any difficulties or concerns about my ability to practice yoga. I will advise my yoga tutor of any change in my medical information. I will follow the advice given to me by my GP or yoga teacher.</p>
+          <label class="declaration-check">
+            <input type="checkbox" id="declaration">
+            <span>By ticking this box I confirm I have read and understood the above declaration and agree to its terms.</span>
+          </label>
+          <div class="declaration-error" id="declaration-error">You must agree to the declaration before submitting.</div>
+        </div>
+      </div>
+
+      <button class="submit-btn" id="submit-btn" type="button">Submit Questionnaire</button>
+
+    </div><!-- /form-container -->
+  </div><!-- /main-form -->
+
+  <!-- Success screen -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon">🌿</div>
+    <h2>Thank you</h2>
+    <p>Your health questionnaire has been received. Claire looks forward to welcoming you to class.</p>
+  </div>
+
+  <script>
+    // ── Checkbox visual toggle ──────────────────────────────────────────
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.check-item').classList.toggle('checked', cb.checked);
+      });
+    });
+
+    // ── Show pregnancy weeks field when Pregnant is ticked ──────────────
+    document.getElementById('pregnant-cb').addEventListener('change', function() {
+      document.getElementById('pregnancy-weeks-field').classList.toggle('visible', this.checked);
+    });
+
+    // ── Validation helpers ──────────────────────────────────────────────
+    function setError(fieldId, show) {
+      document.getElementById(fieldId).classList.toggle('error', show);
+    }
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // ── Collect checked conditions ──────────────────────────────────────
+    function getConditions() {
+      const checked = [];
+      document.querySelectorAll('#conditions-grid input[type="checkbox"]:checked').forEach(cb => {
+        checked.push(cb.value);
+      });
+      return checked.join(', ') || 'None';
+    }
+
+    // ── Submit ──────────────────────────────────────────────────────────
+    document.getElementById('submit-btn').addEventListener('click', function() {
+      let valid = true;
+
+      const name        = document.getElementById('name').value.trim();
+      const mobile      = document.getElementById('mobile').value.trim();
+      const email       = document.getElementById('email').value.trim();
+      const emergency   = document.getElementById('emergency').value.trim();
+      const declaration = document.getElementById('declaration').checked;
+
+      setError('field-name',      !name);                if (!name)               valid = false;
+      setError('field-mobile',    !mobile);              if (!mobile)             valid = false;
+      setError('field-email',     !validateEmail(email)); if (!validateEmail(email)) valid = false;
+      setError('field-emergency', !emergency);           if (!emergency)          valid = false;
+
+      const declarationError = document.getElementById('declaration-error');
+      if (!declaration) { declarationError.classList.add('visible');    valid = false; }
+      else              { declarationError.classList.remove('visible'); }
+
+      if (!valid) {
+        const firstError = document.querySelector('.field.error, .declaration-error.visible');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // ── Collect all data ────────────────────────────────────────────
+      const formData = {
+        timestamp:          new Date().toISOString(),
+        class_type:         'Restorative',
+        name,
+        address:            document.getElementById('address').value.trim(),
+        mobile,
+        email,
+        dob:                document.getElementById('dob').value,
+        emergency_contact:  emergency,
+        yoga_experience:    document.getElementById('yoga-experience').value.trim(),
+        other_exercise:     document.getElementById('other-exercise').value.trim(),
+        goals:              document.getElementById('goals').value.trim(),
+        conditions:         getConditions(),
+        pregnancy_weeks:    document.getElementById('pregnant-cb').checked
+                              ? document.getElementById('pregnancy-weeks').value : '',
+        other_condition:    document.getElementById('other-condition').value.trim(),
+        declaration_agreed: 'Yes'
+      };
+
+      console.log('Form submission data:', formData);
+
+      // TODO Story 4: POST formData to Google Sheets via Apps Script URL
+      // fetch(APPS_SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) })
+
+      // ── Show success ────────────────────────────────────────────────
+      document.getElementById('main-form').classList.add('hidden');
+      document.getElementById('success-screen').classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
