@@ -1,30 +1,29 @@
 /* ============================================
    Claire Edwards Yoga — Shared Form Styles
-   Edit colours in :root to restyle all forms
+   Brand: warm cream, Playfair Display headings,
+   Raleway body, black action buttons only.
+   Edit :root variables to tweak brand colours.
    ============================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --sage: #7a8c6e;
-  --sage-light: #a8b89a;
-  --sage-pale: #eef1eb;
-  --sage-dark: #4a5c3e;
-  --warm-white: #faf9f6;
-  --warm-grey: #f2efe9;
-  --text: #2c2c2a;
-  --text-muted: #7a7870;
-  --border: #d8d4cc;
-  --accent: #c17f4a;
-  --error: #b85c4a;
+  --cream: #f3ede7;           /* page background — matches clairedwardsyoga.com */
+  --cream-dark: #ebe3db;      /* subtle depth for cards, intro box, declaration */
+  --cream-border: #d4c9be;    /* all borders */
+  --text: #2c2420;            /* warm dark brown — main text */
+  --text-muted: #7a6e66;      /* labels, muted text, section labels */
+  --black: #1a1a1a;           /* action buttons only (Submit, Next) */
+  --black-hover: #3a3330;
+  --error: #8b3a2a;           /* validation errors */
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background-color: var(--warm-white);
+  background-color: var(--cream);
   color: var(--text);
   min-height: 100vh;
   padding-bottom: 60px;
@@ -35,54 +34,34 @@ body {
    ============================================ */
 
 .header {
-  background: var(--sage-dark);
-  padding: 40px 24px 32px;
+  background: var(--cream);
+  padding: 48px 24px 36px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.header::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-}
-.header::after {
-  content: '';
-  position: absolute;
-  bottom: -60px; left: -20px;
-  width: 160px; height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--cream-border);
 }
 .header-eyebrow {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--sage-light);
-  margin-bottom: 10px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
 }
 .header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 30px;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 6px;
-}
-.header h1 em {
-  font-style: italic;
-  color: var(--sage-light);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 38px;
+  color: var(--text);
+  line-height: 1.25;
+  font-style: normal;
 }
 .header-sub {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 0.5px;
-  margin-top: 8px;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 14px;
 }
 
 /* ============================================
@@ -90,16 +69,11 @@ body {
    ============================================ */
 
 .intro {
-  background: var(--sage-pale);
-  border-left: 3px solid var(--sage);
-  margin: 24px auto 0;
+  background: var(--cream-dark);
+  border-left: 3px solid var(--cream-border);
+  margin-top: 28px;
   padding: 16px 18px;
   border-radius: 0 6px 6px 0;
-  max-width: 600px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 .intro p {
   font-size: 13px;
@@ -108,13 +82,13 @@ body {
 }
 
 /* ============================================
-   FORM CONTAINER
+   PAGE WRAPPER — centres content on desktop
    ============================================ */
 
 .form-container {
-  padding: 0 20px;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* ============================================
@@ -125,14 +99,14 @@ body {
   margin-top: 32px;
 }
 .section-label {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--text-muted);
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--cream-border);
   margin-bottom: 20px;
 }
 
@@ -145,15 +119,15 @@ body {
 }
 .field label {
   display: block;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--text-muted);
   margin-bottom: 6px;
   text-transform: uppercase;
 }
 .field label .required {
-  color: var(--accent);
+  color: var(--error);
   margin-left: 3px;
 }
 .field input,
@@ -161,10 +135,10 @@ body {
 .field select {
   width: 100%;
   background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
   padding: 12px 14px;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
   font-weight: 300;
   color: var(--text);
@@ -176,8 +150,8 @@ body {
 .field textarea:focus,
 .field select:focus {
   outline: none;
-  border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(122,140,110,0.12);
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(44,36,32,0.06);
 }
 .field textarea {
   min-height: 90px;
@@ -203,9 +177,9 @@ body {
    ============================================ */
 
 .checklist-intro {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 17px;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.6;
   color: var(--text);
   margin-bottom: 16px;
@@ -223,27 +197,27 @@ body {
   align-items: center;
   gap: 10px;
   background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
   padding: 10px 12px;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
   user-select: none;
 }
 .check-item:hover {
-  border-color: var(--sage-light);
-  background: var(--sage-pale);
+  border-color: var(--text);
+  background: var(--cream-dark);
 }
 .check-item input[type="checkbox"] {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  accent-color: var(--sage-dark);
+  accent-color: var(--black);
   cursor: pointer;
 }
 .check-item.checked {
-  border-color: var(--sage);
-  background: var(--sage-pale);
+  border-color: var(--text-muted);
+  background: var(--cream-dark);
 }
 .check-item span {
   font-size: 13px;
@@ -252,14 +226,14 @@ body {
 }
 
 /* ============================================
-   CONDITIONAL FIELDS (e.g. pregnancy weeks)
+   CONDITIONAL FIELDS
    ============================================ */
 
 .conditional-field {
   margin-top: 8px;
   display: none;
   padding: 12px;
-  background: var(--warm-grey);
+  background: var(--cream-dark);
   border-radius: 6px;
 }
 .conditional-field.visible { display: block; }
@@ -273,16 +247,16 @@ body {
 }
 .conditional-field input {
   width: 100%;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
   padding: 10px 12px;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
   background: #fff;
 }
 .conditional-field input:focus {
   outline: none;
-  border-color: var(--sage);
+  border-color: var(--text);
 }
 
 .other-field {
@@ -298,8 +272,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 20px 24px 0;
-  max-width: 600px;
+  padding: 24px 24px 0;
+  max-width: 640px;
   margin: 0 auto;
 }
 .progress-step {
@@ -313,7 +287,8 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--border);
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,11 +298,13 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .progress-dot.active {
-  background: var(--sage-dark);
+  background: var(--black);
+  border-color: var(--black);
   color: #fff;
 }
 .progress-dot.complete {
-  background: var(--sage);
+  background: var(--text-muted);
+  border-color: var(--text-muted);
   color: #fff;
 }
 .progress-label {
@@ -340,11 +317,10 @@ body {
 .progress-line {
   height: 1px;
   flex: 1;
-  background: var(--border);
+  background: var(--cream-border);
   margin-bottom: 14px;
 }
 
-/* Step panels */
 .step-panel { display: none; }
 .step-panel.active { display: block; }
 
@@ -357,9 +333,9 @@ body {
   flex: 1;
   padding: 14px;
   background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: 'Jost', sans-serif;
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 1.5px;
@@ -369,16 +345,16 @@ body {
   transition: border-color 0.2s, color 0.2s;
 }
 .btn-back:hover {
-  border-color: var(--sage);
-  color: var(--sage-dark);
+  border-color: var(--text);
+  color: var(--text);
 }
 .btn-next {
   flex: 2;
   padding: 14px;
-  background: var(--sage-dark);
+  background: var(--black);
   border: none;
-  border-radius: 8px;
-  font-family: 'Jost', sans-serif;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -387,7 +363,7 @@ body {
   cursor: pointer;
   transition: background 0.2s;
 }
-.btn-next:hover { background: var(--sage); }
+.btn-next:hover { background: var(--black-hover); }
 
 /* ============================================
    MARKETING OPT-INS
@@ -399,8 +375,8 @@ body {
   gap: 12px;
   padding: 12px;
   background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  border: 1px solid var(--cream-border);
+  border-radius: 4px;
   margin-bottom: 8px;
   cursor: pointer;
 }
@@ -409,7 +385,7 @@ body {
   height: 18px;
   flex-shrink: 0;
   margin-top: 1px;
-  accent-color: var(--sage-dark);
+  accent-color: var(--black);
   cursor: pointer;
 }
 .optin-item span {
@@ -423,9 +399,9 @@ body {
    ============================================ */
 
 .declaration-box {
-  background: var(--warm-grey);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-border);
+  border-radius: 6px;
   padding: 18px;
   margin-top: 8px;
 }
@@ -446,7 +422,7 @@ body {
   height: 20px;
   flex-shrink: 0;
   margin-top: 1px;
-  accent-color: var(--sage-dark);
+  accent-color: var(--black);
   cursor: pointer;
 }
 .declaration-check span {
@@ -472,21 +448,21 @@ body {
   width: 100%;
   margin-top: 32px;
   padding: 16px;
-  background: var(--sage-dark);
+  background: var(--black);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-family: 'Jost', sans-serif;
-  font-size: 14px;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
 }
-.submit-btn:hover { background: var(--sage); }
+.submit-btn:hover { background: var(--black-hover); }
 .submit-btn:active { transform: scale(0.99); }
-.submit-btn:disabled { background: var(--border); cursor: not-allowed; }
+.submit-btn:disabled { background: var(--cream-border); cursor: not-allowed; }
 
 /* ============================================
    SUCCESS SCREEN
@@ -503,7 +479,7 @@ body {
 .success-icon {
   width: 64px;
   height: 64px;
-  background: var(--sage-pale);
+  background: var(--cream-dark);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -512,11 +488,11 @@ body {
   font-size: 28px;
 }
 .success-screen h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 28px;
   margin-bottom: 12px;
-  color: var(--sage-dark);
+  color: var(--text);
 }
 .success-screen p {
   font-size: 14px;
