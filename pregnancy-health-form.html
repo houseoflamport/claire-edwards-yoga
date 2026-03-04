@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Declaration & Questionnaire — Pregnancy Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-eyebrow">Claire Edwards Yoga</div>
+    <h1>Health Declaration<br><em>&amp; Questionnaire</em></h1>
+    <div class="header-sub">Pregnancy Yoga</div>
+  </div>
+
+  <div id="main-form">
+
+    <div class="intro">
+      <p>Starting our classes is no different to starting any other form of exercise — the same advice applies. If you are not used to regular exercise, please move carefully and wait until after 15–16 weeks. If you have symptoms, feel unwell, have a temperature, or are in a high risk category, please do not attend in person — participate via Zoom instead. If in doubt, consult your doctor or midwife.</p>
+    </div>
+
+    <div class="form-container">
+
+      <!-- =====================
+           PERSONAL DETAILS
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Your Details</div>
+
+        <div class="field" id="field-name">
+          <label>Full Name <span class="required">*</span></label>
+          <input type="text" id="name" placeholder="Your full name" autocomplete="name">
+          <div class="field-error-msg">Please enter your name</div>
+        </div>
+
+        <div class="field" id="field-email">
+          <label>Email Address <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="your@email.com" autocomplete="email">
+          <div class="field-error-msg">Please enter a valid email address</div>
+        </div>
+
+        <div class="field">
+          <label>Address</label>
+          <textarea id="address" placeholder="Your address" rows="2"></textarea>
+        </div>
+
+        <div class="field" id="field-mobile">
+          <label>Mobile Phone <span class="required">*</span></label>
+          <input type="tel" id="mobile" placeholder="07700 000000" autocomplete="tel">
+          <div class="field-error-msg">Please enter your mobile number</div>
+        </div>
+
+        <div class="field">
+          <label>Date of Birth</label>
+          <input type="date" id="dob">
+        </div>
+
+        <div class="field" id="field-due-date">
+          <label>Estimated Due Date <span class="required">*</span></label>
+          <input type="date" id="due-date">
+          <div class="field-error-msg">Please enter your estimated due date</div>
+        </div>
+      </div>
+
+      <!-- =====================
+           YOUR HEALTH
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Your Health</div>
+
+        <div class="field">
+          <label>How is your general health?</label>
+          <textarea id="general-health" placeholder="Describe your general health..."></textarea>
+        </div>
+
+        <!-- =====================
+             PREGNANCY SYMPTOMS CHECKLIST
+             Add or remove items below as needed.
+             Each item needs: value="Symptom Name" and a <span> label.
+             ===================== -->
+        <p class="checklist-intro">During this pregnancy have you experienced any of the following?</p>
+
+        <div class="checklist-grid" id="symptoms-grid">
+          <label class="check-item">
+            <input type="checkbox" value="Morning Sickness">
+            <span>Morning Sickness</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Constipation">
+            <span>Constipation</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Heartburn">
+            <span>Heartburn</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Lower Back Ache">
+            <span>Lower Back Ache</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="PGP / SPD / Aching Groins">
+            <span>PGP / SPD / Aching Groins</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Pain from Fibroids / Bleeding">
+            <span>Pain from Fibroids / Bleeding</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Sciatica / Carpal Tunnel">
+            <span>Sciatica / Carpal Tunnel</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Oedema (swollen joints)">
+            <span>Oedema (swollen joints)</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Headaches">
+            <span>Headaches</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Pre-eclampsia">
+            <span>Pre-eclampsia</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Varicose Veins">
+            <span>Varicose Veins</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Nosebleeds">
+            <span>Nosebleeds</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Diabetic">
+            <span>Diabetic</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Fatigue">
+            <span>Fatigue</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Sleep Disturbance">
+            <span>Sleep Disturbance</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Anxiety">
+            <span>Anxiety</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Depression">
+            <span>Depression</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="High / Low Blood Pressure">
+            <span>High / Low Blood Pressure</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Anaemia (low iron) / Dizzy">
+            <span>Anaemia / Dizzy</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Placenta Previa">
+            <span>Placenta Previa</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" value="Breathlessness">
+            <span>Breathlessness</span>
+          </label>
+        </div>
+
+        <div class="field" style="margin-top:16px;">
+          <label>Give further details if any health issue may affect your yoga practice</label>
+          <textarea id="health-details" placeholder="Any further details..."></textarea>
+        </div>
+      </div>
+
+      <!-- =====================
+           PREGNANCY HISTORY
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Pregnancy History</div>
+
+        <div class="field">
+          <label>Previous pregnancies or miscarriages — were there any complications?</label>
+          <textarea id="previous-pregnancies" placeholder="Please describe, or write 'None'"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Previous births — please give ages of children</label>
+          <textarea id="previous-births" placeholder="e.g. Boy age 3, Girl age 1..."></textarea>
+        </div>
+      </div>
+
+      <!-- =====================
+           BACKGROUND
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Background</div>
+
+        <div class="field">
+          <label>Are you taking any medication that may affect your yoga practice? Have you ever had an operation or injury? (e.g. C-section, knee surgery)</label>
+          <textarea id="medication-injuries" placeholder="Please describe, or write 'None'"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Do you have any yoga experience or take any other regular exercise?</label>
+          <textarea id="yoga-experience" placeholder="Tell us about your experience..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Why have you come to learn yoga, and what do you hope to gain?</label>
+          <textarea id="goals" placeholder="Your intentions and goals..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>How did you hear about this class?</label>
+          <input type="text" id="how-heard" placeholder="e.g. Google, friend, Instagram...">
+        </div>
+      </div>
+
+      <!-- =====================
+           MARKETING OPT-INS
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Keep in Touch</div>
+
+        <label class="optin-item">
+          <input type="checkbox" id="optin-lushtums">
+          <span>I would like to receive news &amp; special offers from LushTums by email</span>
+        </label>
+
+        <label class="optin-item">
+          <input type="checkbox" id="optin-claire">
+          <span>I would like to receive news &amp; special offers from Claire Edwards Yoga by email</span>
+        </label>
+      </div>
+
+      <!-- =====================
+           DECLARATION
+           ===================== -->
+      <div class="section">
+        <div class="section-label">Declaration</div>
+        <div class="declaration-box">
+          <p>I understand that by participating in this class I am totally responsible for myself and if in the unlikely event of any injury (to myself or to others) of any kind or miscarriage, the teacher of this class and/or LushTums is not in any way responsible.</p>
+          <label class="declaration-check">
+            <input type="checkbox" id="declaration">
+            <span>By ticking this box I confirm I have read and understood the above declaration and agree to its terms.</span>
+          </label>
+          <div class="declaration-error" id="declaration-error">You must agree to the declaration before submitting.</div>
+        </div>
+      </div>
+
+      <button class="submit-btn" id="submit-btn" type="button">Submit Questionnaire</button>
+
+    </div><!-- /form-container -->
+  </div><!-- /main-form -->
+
+  <!-- Success screen -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-icon">🌿</div>
+    <h2>Thank you</h2>
+    <p>Your health questionnaire has been received. Claire looks forward to welcoming you to class.</p>
+  </div>
+
+  <script>
+    // ── Checkbox visual toggle ──────────────────────────────────────────
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.check-item').classList.toggle('checked', cb.checked);
+      });
+    });
+
+    // ── Validation helpers ──────────────────────────────────────────────
+    function setError(fieldId, show) {
+      document.getElementById(fieldId).classList.toggle('error', show);
+    }
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // ── Collect checked symptoms ────────────────────────────────────────
+    function getSymptoms() {
+      const checked = [];
+      document.querySelectorAll('#symptoms-grid input[type="checkbox"]:checked').forEach(cb => {
+        checked.push(cb.value);
+      });
+      return checked.join(', ') || 'None';
+    }
+
+    // ── Submit ──────────────────────────────────────────────────────────
+    document.getElementById('submit-btn').addEventListener('click', function() {
+      let valid = true;
+
+      const name        = document.getElementById('name').value.trim();
+      const email       = document.getElementById('email').value.trim();
+      const mobile      = document.getElementById('mobile').value.trim();
+      const dueDate     = document.getElementById('due-date').value;
+      const declaration = document.getElementById('declaration').checked;
+
+      setError('field-name',     !name);              if (!name)               valid = false;
+      setError('field-email',    !validateEmail(email)); if (!validateEmail(email)) valid = false;
+      setError('field-mobile',   !mobile);            if (!mobile)             valid = false;
+      setError('field-due-date', !dueDate);           if (!dueDate)            valid = false;
+
+      const declarationError = document.getElementById('declaration-error');
+      if (!declaration) { declarationError.classList.add('visible');    valid = false; }
+      else              { declarationError.classList.remove('visible'); }
+
+      if (!valid) {
+        const firstError = document.querySelector('.field.error, .declaration-error.visible');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // ── Collect all data ────────────────────────────────────────────
+      const formData = {
+        timestamp:            new Date().toISOString(),
+        class_type:           'Pregnancy',
+        name,
+        email,
+        address:              document.getElementById('address').value.trim(),
+        mobile,
+        dob:                  document.getElementById('dob').value,
+        due_date:             dueDate,
+        general_health:       document.getElementById('general-health').value.trim(),
+        symptoms:             getSymptoms(),
+        health_details:       document.getElementById('health-details').value.trim(),
+        previous_pregnancies: document.getElementById('previous-pregnancies').value.trim(),
+        previous_births:      document.getElementById('previous-births').value.trim(),
+        medication_injuries:  document.getElementById('medication-injuries').value.trim(),
+        yoga_experience:      document.getElementById('yoga-experience').value.trim(),
+        goals:                document.getElementById('goals').value.trim(),
+        how_heard:            document.getElementById('how-heard').value.trim(),
+        optin_lushtums:       document.getElementById('optin-lushtums').checked ? 'Yes' : 'No',
+        optin_claire:         document.getElementById('optin-claire').checked ? 'Yes' : 'No',
+        declaration_agreed:   'Yes'
+      };
+
+      console.log('Form submission data:', formData);
+
+      // TODO Story 4: POST formData to Google Sheets via Apps Script URL
+      // fetch(APPS_SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) })
+
+      // ── Show success ────────────────────────────────────────────────
+      document.getElementById('main-form').classList.add('hidden');
+      document.getElementById('success-screen').classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
